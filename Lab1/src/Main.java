@@ -5,6 +5,7 @@ import Service.DepartmentService;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -28,7 +29,22 @@ public class Main {
 
         DepartmentService manager = new DepartmentService(departments, employees);
         Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter department name to display employees:");
         String searchName = scanner.next();
         manager.displayDepartmentsWithEmployees(searchName);
+
+        System.out.println("\nGrouping employees by department:");
+        Map<String, Set<Employee>> groupedEmployees = manager.groupEmployeesByDepartment();
+        groupedEmployees.forEach((departmentName, employeeSet) -> {
+            System.out.println("Department: " + departmentName);
+            employeeSet.forEach(System.out::println);
+        });
+
+        System.out.println("\nCounting total employees per department:");
+        Map<String, Long> employeeCount = manager.countEmployeesByDepartment();
+        employeeCount.forEach((departmentName, count) -> {
+            System.out.println("Department: " + departmentName + ", Employee Count: " + count);
+        });
     }
 }
