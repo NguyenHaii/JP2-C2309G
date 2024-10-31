@@ -55,7 +55,7 @@ public class Main {
         Map<Integer, Set<Employee>> employeesDoB = manager.countEmployeeByDoB();
         employeesDoB.forEach((month, empSet) -> {
             System.out.println("Month: " + month + " -> Employee Count: " + empSet.size());
-            empSet.forEach(employee -> System.out.println("Employee: " + employee.getName()));
+            empSet.forEach(employee -> System.out.println("Deparment: " + employee.getDepartment().getName_Dep() + " | Employee: " + employee.getName()));
         });
 
 
