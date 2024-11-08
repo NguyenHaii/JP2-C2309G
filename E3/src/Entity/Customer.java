@@ -1,24 +1,35 @@
 package Entity;
 
 public class Customer {
-    private String id;
+    private int id;
+    private String codeCustomer;
     private String name;
     private String phone;
 
-    public Customer() {;}
+    public Customer() {
+    }
 
-    public Customer(String id, String name, String phone) {
+    public Customer(int id, String codeCustomer, String name, String phone) {
         this.id = id;
+        this.codeCustomer = codeCustomer;
         this.name = name;
         this.phone = phone;
     }
 
-    public String getPhone() {
-        return phone;
+    public int getId() {
+        return id;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getCodeCustomer() {
+        return codeCustomer;
+    }
+
+    public void setCodeCustomer(String codeCustomer) {
+        this.codeCustomer = codeCustomer;
     }
 
     public String getName() {
@@ -29,18 +40,19 @@ public class Customer {
         this.name = name;
     }
 
-    public String getId() {
-        return id;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     @Override
     public String toString() {
         return "Customer{" +
-                "id='" + id + '\'' +
+                "id=" + id +
+                ", codeCustomer='" + codeCustomer + '\'' +
                 ", name='" + name + '\'' +
                 ", phone='" + phone + '\'' +
                 '}';

@@ -1,24 +1,38 @@
+
 package Entity;
+import E3.Entity.RoomType;
+
 
 public class Room {
-    private String id;
+    private int id;
+    private String codeRoom;
     private RoomType roomType;
     private double pricePerHour;
 
-    public Room() {;}
+    public Room() {
+    }
 
-    public Room(String id, RoomType roomType, double pricePerHour) {
+    public Room(int id, String codeRoom,RoomType roomType, double pricePerHour) {
         this.id = id;
+        this.codeRoom = codeRoom;
         this.roomType = roomType;
         this.pricePerHour = pricePerHour;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public String getCodeRoom() {
+        return codeRoom;
+    }
+
+    public void setCodeRoom(String codeRoom) {
+        this.codeRoom = codeRoom;
     }
 
     public RoomType getRoomType() {
@@ -40,7 +54,8 @@ public class Room {
     @Override
     public String toString() {
         return "Room{" +
-                "id='" + id + '\'' +
+                "id=" + id +
+                ", codeRoom='" + codeRoom + '\'' +
                 ", roomType=" + roomType +
                 ", pricePerHour=" + pricePerHour +
                 '}';

@@ -1,46 +1,49 @@
 package Entity;
 
 import java.time.LocalDateTime;
+import Entity.Customer;
+import Entity.Room;
 
 public class Booking {
-    private String id;
-    private String roomId;
-    private String customerId;
+    private int id;
+    private Room room;
+    private Customer customer;
     private LocalDateTime checkIn;
     private LocalDateTime checkOut;
 
-    public Booking() {;}
+    public Booking() {
+    }
 
-    public Booking(String id, String roomId, String customerId, LocalDateTime checkIn, LocalDateTime checkOut) {
+    public Booking(int id, Room room, Customer customer, LocalDateTime checkIn, LocalDateTime checkOut) {
         this.id = id;
-        this.roomId = roomId;
-        this.customerId = customerId;
+        this.room = room;
+        this.customer = customer;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getRoomId() {
-        return roomId;
+    public Room getRoom() {
+        return room;
     }
 
-    public void setRoomId(String roomId) {
-        this.roomId = roomId;
+    public void setRoom(Room room) {
+        this.room = room;
     }
 
-    public String getCustomerId() {
-        return customerId;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setCustomerId(String customerId) {
-        this.customerId = customerId;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public LocalDateTime getCheckIn() {
@@ -62,9 +65,9 @@ public class Booking {
     @Override
     public String toString() {
         return "Booking{" +
-                "id='" + id + '\'' +
-                ", roomId='" + roomId + '\'' +
-                ", customerId='" + customerId + '\'' +
+                "id=" + id +
+                ", room=" + room +
+                ", customer=" + customer +
                 ", checkIn=" + checkIn +
                 ", checkOut=" + checkOut +
                 '}';
