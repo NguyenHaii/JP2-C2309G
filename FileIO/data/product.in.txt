@@ -1,0 +1,6 @@
+121;Laptop;1200;10
+122;Smartphone;800;15
+123;Headphones;150;25
+124;Monitor;300;8
+125;Keyboard;50;20
+126;Mouse;25;30

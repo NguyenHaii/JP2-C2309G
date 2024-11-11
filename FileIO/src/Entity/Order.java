@@ -4,14 +4,14 @@ import java.time.LocalDateTime;
 
 public class Order {
     private int id;
-    private int customerid;
+    private int customerId;
     private LocalDateTime dateTime;
 
-    public Order(){;}
+    public Order() {}
 
-    public Order(int id, int customerid, LocalDateTime dateTime) {
+    public Order(int id, int customerId, LocalDateTime dateTime) {
         this.id = id;
-        this.customerid = customerid;
+        this.customerId = customerId;
         this.dateTime = dateTime;
     }
 
@@ -23,12 +23,12 @@ public class Order {
         this.id = id;
     }
 
-    public int getCustomerid() {
-        return customerid;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setCustomerid(int customerid) {
-        this.customerid = customerid;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     public LocalDateTime getDateTime() {
